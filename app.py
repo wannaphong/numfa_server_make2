@@ -1,20 +1,17 @@
 # -*- coding: utf-8 -*-
-from flask import Flask
-from datetime import datetime
-import os
+from flask import Flask, render_template,request, jsonify
+from run import get_chatbot
+
 app = Flask(__name__)
 
 @app.route('/')
-def homepage():
-    the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
+def index():
+    return render_template('index.html')
 
-    return """
-    <h1>Hello heroku</h1>
-    <p>It is currently {time}.</p>
-
-    <img src="http://loremflickr.com/600/400" />
-    """.format(time=the_time)
+@app.route('/api/chat_message')
+def get_bot_response():
+    userText = request.args.get('msg')
+    return str(get_chatbot(userText))
 
 if __name__ == '__main__':
-	#port = int(os.environ.get('PORT', 5000))
-	app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=True)

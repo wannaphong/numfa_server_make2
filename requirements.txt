@@ -1,2 +1,6 @@
 Flask
 gunicorn
+pythainlp
+nltk
+gensim
+chatterbot
