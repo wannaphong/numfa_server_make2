@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask
 from datetime import datetime
 app = Flask(__name__)
@@ -14,5 +15,5 @@ def homepage():
     """.format(time=the_time)
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
+    app.run(debug=True)
 
