@@ -4,3 +4,5 @@ pythainlp
 nltk
 gensim
 chatterbot
+scikit-learn
+numpy
