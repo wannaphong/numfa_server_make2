@@ -9,3 +9,5 @@ db_chat_log.setup()
 print("db chatlog : OK")
 db_chat_train.setup()
 print("db chattrain : OK")
+from pythainlp.word_vector import thai2vec
+thai2vec.similarity("คน","มนุษย์") 
