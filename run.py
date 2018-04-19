@@ -14,7 +14,7 @@ chatbot = ChatBot(
     filters=['chatterbot.filters.RepetitiveResponseFilter'],
     logic_adapters=[
         'chatterbot.logic.BestMatch',
-        'timenow.TimeLogicAdapter',
+        #'timenow.TimeLogicAdapter',
         #'weather.WeatherLogicAdapter',
         {
             'import_path':'chatterbot.logic.LowConfidenceAdapter',
