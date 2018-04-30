@@ -20,7 +20,7 @@ def get_weather():
     return toweather.get_now_day()
 
 @app.route('/api/translator_thai')
-def get_bot_response():
+def get_translator_thai():
     userText = str(request.args.get('msg'))
     return translator.translator_to_thai(userText)
 
